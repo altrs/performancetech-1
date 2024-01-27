@@ -27,7 +27,7 @@
 </head>
 <body>
     <div class="center-container">
-        <p class="centered-sentence" style="margin-top:150px">THIS RING IS EMPTY</p>
+        <p id="title" class="centered-sentence" style="margin-top:150px">THIS RING IS EMPTY</p>
 
         <p class="centered-sentence" id="sentence1" style="display: none;" style="font-size: 20px;">USER HAS CHOSEN TO FIND</p>
         <p class="centered-sentence" id="sentence2" style="display: none;" style="font-size: 20px;">USER HAS CHOSEN TO LOSE</p>
@@ -39,33 +39,40 @@
 
     <script>
         document.addEventListener('keydown', function(event) {
-        const keyCode = event.code;
+            // Get the key code of the pressed key
+            const keyCode = event.code;
 
-        // Check if the pressed key corresponds to a number (1 to 9)
-        if (keyCode.startsWith('Digit') && keyCode.length === 6) {
-            const sentenceNumber = parseInt(keyCode[5]);
+            // Check if the pressed key corresponds to a number (1 to 9)
+            if (keyCode.startsWith('Digit') && keyCode.length === 6) {
+                const sentenceNumber = parseInt(keyCode[5]);
 
+                // Hide all sentences
+                hideAllSentences();
+
+                // Show the selected sentence
+                const selectedSentence = document.getElementById(`sentence${sentenceNumber}`);
+                if (selectedSentence) {
+                    selectedSentence.style.display = 'block';
+                }
+            } else if (keyCode === 'Space') {
+                // Change the text of the 'title' element when the space bar is pressed
+                const titleElement = document.getElementById('title');
+                if (titleElement) {
+                    titleElement.innerText = 'THE END';
+                }
+            }
+        });
+
+        function hideAllSentences() {
             // Hide all sentences
-            hideAllSentences();
-
-            // Show the selected sentence
-            const selectedSentence = document.getElementById(`sentence${sentenceNumber}`);
-            if (selectedSentence) {
-                selectedSentence.style.display = 'block';
-                selectedSentence.style.fontSize = '20px';
+            for (let i = 1; i <= 9; i++) {
+                const sentence = document.getElementById(`sentence${i}`);
+                if (sentence) {
+                    sentence.style.display = 'none';
+                }
             }
         }
-    });
 
-    function hideAllSentences() {
-        // Hide all sentences
-        for (let i = 1; i <= 9; i++) {
-            const sentence = document.getElementById(`sentence${i}`);
-            if (sentence) {
-                sentence.style.display = 'none';
-            }
-        }
-    }
 
     </script>
 </body>
