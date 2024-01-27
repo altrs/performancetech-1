@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>THIS RING IS EMPTY</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+    	<button class="speakButton" onclick="speakText('THIS RING IS EMPTY')">THIS RING IS EMPTY</button>
+    	<br><br>
+    	<button class="speakButton" onclick="speakText('DO YOU WANT TO FILL THIS RING WITH SOME MEANING? PLEASE CHOOSE A WORD')">INSTRUCTIONS 1</button>
+    	<button class="speakButton" onclick="speakText('CHOOSE A WORD')">CHOOSE A WORD</button>
+    	<br><br>
+        <button class="speakButton" onclick="speakText('Amidst the bustling streets of Manhattan, USER @JAKE-JACK34420, a weary commuter, stumbled upon a glimmer of fortune in an unexpected place—an elegant ring lying inconspicuously on the pavement. Intrigued by its opulent design, he hesitated for a moment, glancing around as if expecting the owner to appear. Yet, the busy city crowds paid no attention to his discovery. The ring, adorned with a dazzling sapphire, seemed too precious to be abandoned. A sense of curiosity and a hint of excitement overcame Jake as he pocketed the find. Later, in the dim glow of their apartment, he examined the ring more closely, its intricate details revealing a story untold. Little did Jake know that this chance encounter would usher them into a world of unexpected twists and turns, where the origins of the ring held secrets that would unravel in the days to come. DID USER @JAKE-JACK34420 DO THE RIGHT THING BY TAKING THE RING WITH THEM?')">TO FIND</button>
+        <button class="speakButton" onclick="speakText('USER @SAR-SONIC45_XX2  heart sank as they realized their wedding ring was no longer on their finger. Panic set in as they retraced their steps, desperately searching through the house and the garden where they had been earlier. Hours passed, but the cherished symbol of their love remained elusive. Exhausted and defeated, USER @SAR-SONIC45_XX2  finally admitted the truth to their spouse, tears welling in their eyes. Their once-perfect day turned somber, as the weight of the lost ring echoed the unspoken fears that had lingered between them. In the fading light, they shared a silent moment of sorrow, realizing that some losses couldn\'t be mended. The empty space on their finger became a poignant reminder of the fragility of the things we hold dear. DO YOU THINK USER @SAR-SONIC45_XX2  DID THE RIGHT THING BY TELLING THEIR SPOUSE ABOUT THE LOST RING?')">TO LOSE</button>
+        <button class="speakButton" onclick="speakText('Five years have passed since USER @SONG_OF_Galow33#91 chose to give their sister the old ring from the bottom of her drawer. The ring, though weathered and aged, held sentimental value that transcended its physical appearance. Over the years, it became a symbol of the bond between you and your sibling, a silent witness to shared laughter, tears, and countless memories. Now, as time has woven a new chapter into your lives,you find yourself contemplating the significance of that ring. Do you want it back? Perhaps not for the ring itself, but for the connection it represents. DOES USER @SONG_OF_Galow33#91 WANT IT BACK?')">TO GIVE</button>
+        <button class="speakButton" onclick="speakText('USER @MENTAL_Motor+ll7&2 I made a spontaneous decision when I chose to pick up an item that had fallen from an elderly man\'s pocket. Seizing the opportunity, I handed it to my unsuspecting daughter without dwelling too much on its origin. As time passed, the item became a cherished possession, symbolizing a unique story of chance and spontaneity. I found a certain unexpected joy in the serendipity of the situation. The item, now in my daughter\'s hands, holds a special place in our lives, a reminder that sometimes, even impulsive actions can lead to moments of unforeseen connection and meaning. DOES USER @MENTAL_Motor+ll7&2  REGRET IT?')">TO STEAL</button>
+        <button class="speakButton" onclick="speakText('In the midst of a dire financial predicament, the USER @BrAziLiaN_SAMBa!#1989 found themself grappling with the harsh reality of scarcity. Faced with the pressing need for sustenance, they made a bold and unconventional decision, choosing to trade a cherished ring in exchange for food. This seemingly mundane piece of jewelry held sentimental value and memories of better times, but the urgency of the situation pushed the user to prioritize their immediate needs. As the ring changed hands, it symbolized not only a transaction for survival but also the resilience and adaptability of an individual navigating the challenges of a bad financial moment. DID USER @BrAziLiaN_SAMBa!#1989 DO THE RIGHT THING?')">TO TRADE</button>
+        <button class="speakButton" onclick="speakText('As USER @FRANTIC_CAMOMILE_1995_ stood on the brink of a momentous life decision, the anticipation of proposing to their fiancé was abruptly shattered by the heart-wrenching revelation of betrayal. In a cruel twist of fate, they stumbled upon the painful truth that their soon-to-be life partner had been unfaithful. The carefully planned proposal now hung in the balance, overshadowed by the devastating discovery. The once-bright future they had envisioned together crumbled, leaving behind a mix of emotions—heartbreak, disbelief, and a profound sense of loss. In the face of this unexpected turmoil, USER @FRANTIC_CAMOMILE_1995_ grappled with the shattered pieces of their relationship, unsure of how to move forward from the impending proposal that had morphed into an unexpected and painful crossroads. SHOULD USER @FRANTIC_CAMOMILE_1995_  PROPOSE ANYWAY BECAUSE THEY LOVE THE FIANCE SO MUCH AND THEY BELIEVE THEY WILL CHANGE?')">TO PROPOSE</button>
+
+        <br>
+        <button class="speakButton" onclick="speakText('DO YOU THINK USER @SAR-SONIC45_XX2  DID THE RIGHT THING BY TELLING THEIR SPOUSE ABOUT THE LOST RING?')">TO LOSE?</button>
+        <button class="speakButton" onclick="speakText('DOES USER @SONG_OF_Galow33#91 WANT IT BACK?')">TO GIVE?</button>
+        <button class="speakButton" onclick="speakText('DOES USER @MENTAL_Motor+ll7&2  REGRET IT?')">TO STEAL?</button>
+        <button class="speakButton" onclick="speakText('DID USER @BrAziLiaN_SAMBa!#1989 DO THE RIGHT THING?')">TO TRADE?</button>
+        <button class="speakButton" onclick="speakText('SHOULD USER @FRANTIC_CAMOMILE_1995_  PROPOSE ANYWAY BECAUSE THEY LOVE THE FIANCE SO MUCH AND THEY BELIEVE THEY WILL CHANGE?')">TO PROPOSE?</button>
+
+
+        <br><br>
+        <button class="speakButton" onclick="speakText('BASED ON YOUR ANSWER PIN THE PIECE OF PAPER TO THE mannequin. PLACE it ON THE LEFT IF YOU\'RE ANSWER IS YES. PLACE it ON THE RIGHT IF THE ANSWER IS NO.')">INSTRUCTIONS 1</button>
+
+    </div>
+    <script>
+    	let currentlySpeaking = null;
+
+		function speakText(text) {
+		    stopAudio();
+		    const synth = window.speechSynthesis;
+		    const utterance = new SpeechSynthesisUtterance(text);
+		    utterance.pitch = 0.5;
+		    synth.speak(utterance);
+		    currentlySpeaking = utterance;
+		}
+
+		function stopAudio() {
+		    const synth = window.speechSynthesis;
+		    if (currentlySpeaking) {
+		        synth.cancel();
+		        currentlySpeaking = null;
+		    }
+		}
+
+    </script>
+</body>
+</html>
+
